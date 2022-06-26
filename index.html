@@ -11,66 +11,78 @@
 
 <body>
     <header>
-      
         <a href="#">
             <h1> <span>N</span>OT <span>N</span>ULL</h1>
         </a>
-        <ul>
-            <li><a class="nav"href="#">HOME</a></li>
-            <li><a class="nav"href="#card-section">CARD</a></li>
-            <li><a  class="nav" href="#">CONTACT</a></li>
-            <li><a  class="nav"href="#footer-nav">FOOTER</a></li>
-
+        <ul class="nav-items" id="nav-Items">
+            <li>
+                <a class="nav" href="#" onclick="navClose()">HOME</a>
+            </li>
+            <li>
+                <a class="nav" href="#card-section" onclick="navClose()">CARD</a>
+            </li>
+            <li>
+                <a class="nav" href="https://twitter.com/rijo_paduppu" onclick="navClose()">CONTACT</a>
+            </li>
+            <li><a class="nav" href="#footer-nav" onclick="navClose()">FOOTER</a></li>
         </ul>
-        <div class="burger-menu">
+        <div class="burger-menu" onclick="navSlide()">
             <div class="line"> </div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
     </header>
     <main>
-         
-
         <h1 class="main-h1">Welcome to Not Null</h1>
         <p class="main-p">This website is made for learn designing</p>
         <a class="main-a" href="https://www.youtube.com/channel/UCs1KMWtOLruuuMq1KD_wNeQ">Get Started &nbsp;
             <img src="./play.svg" alt="play button">
         </a>
-
     </main>
     <section id="card-section">
         <h1>Card Section</h1>
         <div class="cards-container">
             <div class="card">
-                <img  class="card-img" src="./img/atom.png" alt="card image">
+                <img class="card-img" src="./img/atom.png" alt="card image">
                 <h6>Atom</h6>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident nihil itaque odio quo libero officiis perferendis iure cum, doloremque autem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident nihil itaque odio quo libero
+                    officiis perferendis iure cum, doloremque autem.</p>
             </div>
             <div class="card">
-                <img  class="card-img" src="./img/flask.png" alt="card image">
+                <img class="card-img" src="./img/flask.png" alt="card image">
                 <h6>Atom</h6>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident nihil itaque odio quo libero officiis perferendis iure cum, doloremque autem.</p>
-
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident nihil itaque odio quo libero
+                    officiis perferendis iure cum, doloremque autem.</p>
             </div>
             <div class="card">
-                <img  class="card-img" src="./img/geography.png" alt="card image">
+                <img class="card-img" src="./img/geography.png" alt="card image">
                 <h6>Atom</h6>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident nihil itaque odio quo libero officiis perferendis iure cum, doloremque autem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident nihil itaque odio quo libero
+                    officiis perferendis iure cum, doloremque autem.</p>
             </div>
             <div class="card">
-                <img  class="card-img" src="./img/telescope.png" alt="card image">
+                <img class="card-img" src="./img/telescope.png" alt="card image">
                 <h6>Atom</h6>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident nihil itaque odio quo libero officiis perferendis iure cum, doloremque autem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident nihil itaque odio quo libero
+                    officiis perferendis iure cum, doloremque autem.</p>
             </div>
-
-
         </div>
     </section>
     <footer id="footer-nav">
         <h1>Thank You</h1>
     </footer>
-
-
 </body>
+<script>
+    function navSlide() {
+        var navItems = document.getElementById("nav-Items");
+        navItems.classList.toggle("nav-items--active")
+    }
+    function navClose() {
+        var navActive = document.getElementsByClassName("nav-items--active");
+        if (navActive[0]) {
+            navActive[0].classList.toggle("nav-items--active")
+        }
+    }
+</script>
 
 </html>

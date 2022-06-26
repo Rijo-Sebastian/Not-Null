@@ -1,7 +1,7 @@
-
-html{
+html {
     scroll-behavior: smooth;
 }
+
 * {
     padding: 0;
     margin: 0;
@@ -15,7 +15,7 @@ body {
 header {
     /* background-color: rgba(78,223,99,0.6); */
 
-    background-color: rgba(255, 255, 255, 0.592);
+    background-color: rgba(125, 126, 126, 0.845);
     width: 100%;
     display: flex;
     height: 8vh;
@@ -25,8 +25,8 @@ header {
 }
 
 .burger-menu {
-
     display: none;
+    cursor: pointer;
 }
 
 .line {
@@ -35,7 +35,7 @@ header {
     height: 0.3rem;
     margin: 0.2rem 0;
     border-radius: 5px;
-    cursor: pointer;
+
 
 }
 
@@ -52,18 +52,18 @@ span {
     color: #3C8FF5;
 }
 
-ul {
+.nav-items {
     list-style: none;
     display: flex;
 }
 
-ul li a {
+.nav-items li a {
     text-decoration: none;
     color: #000;
     font-weight: 600;
 }
 
-ul li {
+.nav-items li {
     margin: 0rem 1rem;
 }
 
@@ -85,15 +85,11 @@ main {
 
 .main-h1 {
     color: #fff;
-
-
 }
 
 .main-p {
     color: #fff;
     margin-top: 0.3rem;
-
-
 }
 
 .main-a {
@@ -104,14 +100,10 @@ main {
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     margin-top: 1rem;
-
-
 }
 
 main img {
-    width: 16px;
-
-
+    width: 16px
 }
 
 section h1 {
@@ -121,14 +113,10 @@ section h1 {
     text-transform: capitalize;
 }
 
-
 .cards-container {
     width: 100%;
     display: flex;
     justify-content: center;
-
-
-
 }
 
 .cards-container .card {
@@ -142,9 +130,6 @@ section h1 {
     box-shadow: 0px 0px 8px 1px #9d9d9d;
     border-radius: 15px;
     margin: 1rem;
-
-
-
 }
 
 .card h6 {
@@ -173,13 +158,10 @@ footer h1 {
     color: #fff;
 }
 
-
 /* ####################################################### */
 
 /* Making Responsive  */
-
 @media only screen and (max-width:1100px) {
-
 
     .card p {
         font-size: 0.7rem;
@@ -197,8 +179,6 @@ footer h1 {
     .cards-container .card {
         margin: 1rem 0.7rem;
     }
-
-
 }
 
 @media only screen and (max-width:900px) {
@@ -211,7 +191,6 @@ footer h1 {
         width: 13rem;
         margin: 1rem;
     }
-
 }
 
 @media only screen and (max-width:600px) {
@@ -225,12 +204,29 @@ footer h1 {
 
     .burger-menu {
         display: block;
-
-
     }
 
-    header ul li {
+    .nav-items li {
+        text-align: center;
+        margin: 0.8rem 0;
+    }
+
+    .nav-items {
+        position: absolute;
+        flex-direction: column;
         display: none;
+        background-color: #3C8FF5;
+        transform: translateY(100%);
+        left: 50%;
+        transform: translate(-50%, 100%);
+        width: 90%;
+        padding: 1rem;
+        border-radius: 5px;
+        animation: fade 0.4s ease-in-out;
+    }
+
+    .nav-items--active {
+        display: flex;
     }
 
     header h1 {
@@ -239,7 +235,6 @@ footer h1 {
 
     .main-h1 {
         font-size: 1.5rem;
-
     }
 
     main p {
@@ -250,7 +245,6 @@ footer h1 {
         font-size: 0.7rem;
         margin-top: 0.5rem;
     }
-
 }
 
 @media only screen and (max-width:540px) {
@@ -265,21 +259,28 @@ footer h1 {
 
     .card p {
         font-size: 0.6rem;
-
-
     }
 
     .card h6 {
         margin: 0.5rem 0;
         font-size: 0.9rem;
-
     }
 
     section h1 {
         font-size: 1.5rem;
     }
-    footer{
+
+    footer {
         margin-top: 7rem;
     }
+}
 
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
